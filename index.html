@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codificador</title>
+    
+    <link rel="icon" href="img/icone.png">
+
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  
+  </head>
+  <body>
+    
+    <form class="decoder">
+      
+
+      <div class="esquerda">
+        
+        <div class="titulo"><h2>Codifique o seu texto!</h2></div>
+      <textarea
+        id="entrada"
+        cols="55"
+        rows="7"
+        required
+        placeholder=" Escreva sua mensagem aqui =)"
+      ></textarea>
+
+      <div class="escolhas">
+      <fieldset>
+        <select class="metodo" required>
+          <option>Escolha o método</option>
+          <option>Cifra de Cesar</option>
+          <option>Base 64</option>
+        </select>
+      </fieldset>
+
+      
+      <div class="passo">
+        <input
+          id="chave"
+          type="range"
+          value="21"
+          min="1"
+          max="99"
+          oninput="this.nextElementSibling.value = this.value"
+        />
+        <output>21</output>
+      </div>
+
+      <fieldset class="tipo">
+        <div class="coddecod">
+          <input
+            type="radio"
+            name="coddecod"
+            value="msg-codigo"
+            id="codificar"
+            checked
+          />
+          <label for="codificar">Codificar</label>
+        </div>
+        <div class="cod-decod">
+          <input
+            type="radio"
+            name="coddecod"
+            value="codigo-msg"
+            id="decodificar"
+          />
+          <label for="decodificar">Decodificar</label>
+        </div>
+      </fieldset>
+    </div>
+    </div>
+
+      <div class="direita">
+      <output class="saida"><div id="resposta" class="resposta"></div></p>
+        <h4 id="mensagem1">Hmmm... Nenhuma mensagem encontrada</h4>
+        <h5 id="mensagem2">Digite seu texto na caixa ao lado!</h5>
+        <img src="img/doguinho.jpg" id="imagem">
+        <button class="btn-copiar" id="copiar">
+          Copiar
+        </button>
+      </output>
+      <button class="enviar">Codificar</button>
+    </div>
+      
+      
+    
+    </form>
+    <script src="script/base.js"></script>
+    <script src="script/base64.js"></script>
+    <script src="script/cesar.js"></script>
+  </body>
+</html>
