@@ -15,13 +15,13 @@ body {
   align-items: center;
   justify-content: center;
   font-family: "Poppins", sans-serif;
-  padding: 0 5%;
+  padding: 0 12%;
 }
 
 /*principal*/
 .decoder {
   width: 100%;
-  height: 550px;
+  height: 650px;
   border-radius: 30px;
   display: flex;
   flex-direction: row;
@@ -60,6 +60,10 @@ h2 {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: #e779fe }
+}
+
+.titulo2 {
+  display: none;
 }
 
 /*esquerda*/
@@ -249,11 +253,67 @@ output {
   background: #0379c2;
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1560px) {
+  .decoder {
+    height: 550px;
+  } 
+  body {
+    padding: 0 5%;
+  }
+}
+
+@media (max-width: 720px) {
   .decoder {
     flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
   }
+  .esquerda {
+    width: 100%;
+  }
+  .direita {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .esquerda {
+    height: 70%;
+  }
+}
+@media (max-width: 480px) {
   body {
-    padding: 0;
+    height: auto;
+  }
+  .titulo {
+    display: none;
+  }
+  .titulo2 {
+    display: initial;
+    text-align: center;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 100%;
+    text-shadow: -1px 1px 0 #41ba45,
+            1px 1px 0 #c63d2b,
+            1px -1px 0 #42afac,
+            -1px -1px 0 #c6c23f;
+  }
+  .direita {
+    height: 80%;
+  }
+  .saida h4 {
+    font-size: 20px;
+  }
+  .esquerda {
+    height: 80%;
+  }
+  .escolhas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .passo {
+    width: 90%;
   }
 }
