@@ -36,9 +36,9 @@ enviar.addEventListener("click", function (e) {
   e.preventDefault();
   var mensagem = entrada.value;
   if (metodo.selectedIndex == 0) {
-    metodo.style.backgroundColor = "orangered";
+    metodo.style.backgroundColor = "#ff6b6b";
     setTimeout(
-      () => (metodo.style.backgroundColor = "rgba(100, 25, 160, 0.7)"),
+      () => (metodo.style.backgroundColor = "#ff6b6b"),
       1000
     );
     metodo.style.transition = "1s";
