@@ -280,6 +280,13 @@ output {
   .esquerda {
     height: 70%;
   }
+  .enviar {
+    margin-bottom: 10px;
+  }
+  .enviar:hover {
+    transform: none;
+    transition: none;
+  }
 }
 @media (max-width: 480px) {
   body {
