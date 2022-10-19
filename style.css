@@ -131,6 +131,7 @@ fieldset {
   font-size: 20px;
   width: 30%;
   margin-left: 10px;
+  border: 1px solid rgb(255, 217, 19);
 }
 
 .passo output {
@@ -322,5 +323,6 @@ output {
   }
   .passo {
     width: 90%;
+    margin-top: 10px;
   }
 }
