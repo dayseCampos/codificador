@@ -4,6 +4,7 @@ var mensagem2 = document.getElementById("mensagem2");
 var imagem = document.getElementById("imagem");
 var copiar = document.getElementById("copiar");
 
+//codifica
 function codificarBase64(mensagem) {
   var codigo = btoa(mensagem);
   mensagem1.style.display = "none";
@@ -12,7 +13,7 @@ function codificarBase64(mensagem) {
   resposta.innerText = codigo;
   copiar.style.display = "initial";
 }
-
+//decodifica
 function decodificarBase64(codigo) {
   var valido = true;
   // para evitar Failed to execute 'atob'
@@ -38,7 +39,7 @@ function decodificarBase64(codigo) {
       tipo.style.transition = "1s";
       break;
     }
-  }
+  } 
   if (valido) {
     var mensagem = atob(codigo);
     mensagem1.style.display = "none";
@@ -48,7 +49,7 @@ function decodificarBase64(codigo) {
     copiar.style.display = "initial";
   }
 }
-
+//botao de copiar
 copiar.onclick = () => {
   navigator.clipboard.writeText(resposta.innerText);
 }
