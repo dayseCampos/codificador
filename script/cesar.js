@@ -4,6 +4,7 @@ var mensagem2 = document.getElementById("mensagem2");
 var imagem = document.getElementById("imagem");
 var copiar = document.getElementById("copiar");
 
+//codifica
 function codificarCifra(mensagem, chave) {
   mensagem = mensagem.split("");
   chave = parseInt(chave, 10);
@@ -24,6 +25,7 @@ function codificarCifra(mensagem, chave) {
   resposta.innerText = codigo;
   copiar.style.display = "initial";
 }
+//decodifica
 function decodificarCifra(mensagem, chave) {
   mensagem = mensagem.split("");
   chave = parseInt(chave, 10);
@@ -44,7 +46,7 @@ function decodificarCifra(mensagem, chave) {
   resposta.innerText = codigo;
   copiar.style.display = "initial";
 }
-
+//botao de copiar
 copiar.onclick = () => {
   navigator.clipboard.writeText(resposta.innerText);
 }
