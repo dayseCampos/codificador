@@ -254,6 +254,7 @@ output {
   background: #0379c2;
 }
 
+/*media query*/
 @media (max-width: 1560px) {
   .decoder {
     height: 550px;
